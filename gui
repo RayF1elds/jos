@@ -1,1 +1,19 @@
+-- Script for Grow a Garden: Random Egg Giver
 
+local eggs = {
+    "Bug Egg",
+    "Night Egg",
+    "Paradise Egg",
+    "Mythical Egg"
+}
+
+local chosenEgg = eggs[math.random(1, #eggs)]
+
+-- Example function to simulate giving an egg (replace this part with actual game function if needed)
+local function giveEgg(eggName)
+    print("You received a: " .. eggName)
+    -- example: fire a remote event to give the egg if needed
+    -- game:GetService("ReplicatedStorage").Eggs.GiveEgg:FireServer(eggName)
+end
+
+giveEgg(chosenEgg)
